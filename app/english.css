@@ -1,0 +1,15 @@
+/* English-only spacing; the original Korean page keeps its existing styles. */
+.english-page h2 { line-height: 1.08; }
+.english-page .text-link { letter-spacing: .04em; }
+.english-page .itinerary-period { grid-template-columns: 72px minmax(0, 1fr); }
+.english-page .itinerary-card-top { min-width: 0; }
+.english-page .itinerary-card-top > span { white-space: normal; }
+.english-page .restaurant-name h3 { line-height: 1.12; }
+@media (max-width: 800px) {
+  .english-page .itinerary-period { grid-template-columns: 1fr; gap: 8px; }
+  .english-page .nav { gap: 14px; }
+  .english-page .logo { font-size: 13px; }
+  .english-page .logo-mark { flex-shrink: 0; }
+  .english-page .nav-cta { max-width: 108px; font-size: 11px; }
+  .english-page .nav-cta span { margin-left: 4px; }
+}
