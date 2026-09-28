@@ -123,7 +123,7 @@ const restaurants = [
 ];
 
 const hotels = [
-  { name: "Limketkai Luxe Hotel", grade: "4-star", rooms: "218 rooms", detail: "A golden landmark hotel that defines the city skyline.", image: "/hotel-limketkai.jpg", url: "https://limketkailuxe.com/" },
+  { name: "Limketkai Luxe Hotel", grade: "4-star", rooms: "218 rooms", detail: "A golden landmark hotel that defines the city skyline.", image: "/hotel-limketkai.jpg", secondaryImage: "/hotel-luxe-room.png", url: "https://limketkailuxe.com/" },
   { name: "Seda Centrio Hotel", grade: "4-star", rooms: "147 rooms", detail: "A convenient city hotel connected to Centrio Mall.", image: "/hotel-seda-centrio.jpg", secondaryImage: "/hotel-seda-room.png", url: "https://www.facebook.com/sedacentriohotel/" },
   { name: "Dream Golftel", grade: "3-star", rooms: "42 rooms", detail: "Golf-focused accommodation around five minutes from Del Monte Golf Course.", image: "/hotel-dream-golftel-new.png", url: "https://dreamgolftel.com/" },
   { name: "Lohas Airport Hotel", grade: "3-star", rooms: "16 rooms", detail: "A convenient airport hotel around five minutes from Laguindingan Airport.", image: "/hotel-lohas-pool.jpg", secondaryImage: "/hotel-lohas-airport-new.png", url: "https://www.facebook.com/LohasHotel/" },
@@ -353,7 +353,7 @@ export default function EnglishFamTour() {
               <div className="hotel-image">
                 {hotel.secondaryImage ? (
                   <div className={`hotel-image-pair${hotel.thirdImage ? " hotel-image-trio" : ""}`}>
-                    <div><Image src={hotel.image} alt={`${hotel.name} ${hotel.name === "Seda Centrio Hotel" ? "exterior" : hotel.thirdImage ? "beachfront dining area" : "swimming pool"}`} fill sizes="(max-width: 800px) 50vw, 25vw" /></div>
+                    <div><Image src={hotel.image} alt={`${hotel.name} ${(hotel.name === "Seda Centrio Hotel" || hotel.name === "Limketkai Luxe Hotel") ? "exterior" : hotel.thirdImage ? "beachfront dining area" : "swimming pool"}`} fill sizes="(max-width: 800px) 50vw, 25vw" /></div>
                     <div><Image src={hotel.secondaryImage} alt={`${hotel.name} guest room`} fill sizes="(max-width: 800px) 50vw, 25vw" /></div>
                     {hotel.thirdImage && <div><Image src={hotel.thirdImage} alt={`${hotel.name} swimming pool`} fill sizes="(max-width: 800px) 50vw, 25vw" /></div>}
                   </div>
